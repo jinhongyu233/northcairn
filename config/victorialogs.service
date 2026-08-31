@@ -1,0 +1,20 @@
+[Unit]
+Description=VictoriaLogs Service
+Documentation=https://docs.victoriametrics.com/victorialogs/
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+User=victorialogs
+Group=victorialogs
+ExecStart=/usr/local/victorialogs/victoria-logs-prod \
+    -storageDataPath=/data/victorialogs \
+    -retentionPeriod=180d \
+    -httpListenAddr=:9428
+Restart=on-failure
+RestartSec=10s
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

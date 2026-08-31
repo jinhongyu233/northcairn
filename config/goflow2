@@ -1,0 +1,7 @@
+/data/goflow2/flow.log {
+    size 2G
+    rotate 3
+    missingok
+    notifempty
+    copytruncate
+}

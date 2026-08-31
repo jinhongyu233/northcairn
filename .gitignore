@@ -1,0 +1,7 @@
+/goflow2-v2.2.5-26-g834b784-inline-sampling.1-linux-amd64
+
+# macOS and IDE metadata
+.DS_Store
+.idea/
+/config/dashboard-goflow2-1.json
+/config/vector.yaml
